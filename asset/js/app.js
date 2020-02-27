@@ -12,7 +12,7 @@ var sound = new THREE.Audio(listener);
 
 var audioLoader = new THREE.AudioLoader();
 
-audioLoader.load('omen.mp3', function (buffer) {
+audioLoader.load('asset/music/omen.mp3', function (buffer) {
 
   sound.setBuffer(buffer);
 
@@ -44,7 +44,7 @@ audioLoader.load('omen.mp3', function (buffer) {
 
 //textures
 
-var textureMarsh = new THREE.TextureLoader().load('textures/dessertLand2.jpg', function(texture){
+var textureMarsh = new THREE.TextureLoader().load('asset/textures/dessertLand2.jpg', function(texture){
    // repeating the texture
    texture.wrapS = texture.wrapT = THREE.RepeatWrapping;
    texture.offset.set( 2, 2 );
@@ -88,7 +88,7 @@ starGeo = new THREE.Geometry();
     starGeo.vertices.push(star);
   }
   
-  let sprite = new THREE.TextureLoader().load( 'textures/rain.png' );
+  let sprite = new THREE.TextureLoader().load( 'asset/textures/rain.png' );
 
   let starMaterial = new THREE.PointsMaterial({
     color: 0xaaaaaa,
